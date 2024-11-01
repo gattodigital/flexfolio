@@ -157,3 +157,4 @@ git push origin main
 
 ## Conclusion
 This README provides a comprehensive guide to setting up, developing, and deploying the FlexFolio project with a focus on future scalability for React and CMS integration.
+

@@ -1,40 +1,53 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  mode: 'development', // Set mode to development to avoid minification and enable easier debugging
+  mode: isProduction ? 'production' : 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: isProduction ? 'bundle.[contenthash:8].js' : 'bundle.js',
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+      template: './src/index.html',
+      minify: isProduction ? {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+      } : false,
+    }),
+    new MiniCssExtractPlugin({
+      filename: isProduction ? 'styles.[contenthash:8].css' : 'styles.css',
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          'style-loader',  // 3. Injects styles into the DOM
-          'css-loader',    // 2. Turns css into commonjs
-          'postcss-loader' // 1. Process CSS with PostCSS
-        ]
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
-      }
-    ]
+        use: ['babel-loader'],
+      },
+    ],
   },
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
     open: true,
-    hot: true
-  }
+    hot: true,
+  },
 };

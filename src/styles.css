@@ -990,3 +990,46 @@ footer {
   color: var(--text-muted);
 }
 
+/* ─── Hero Tech Graphic ──────────────────────────────────────────── */
+.hero-tech-graphic {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.65;
+}
+@media (min-width: 768px) {
+  .hero-tech-graphic { right: 3rem; opacity: 0.8; width: 340px; height: 340px; }
+}
+@media (min-width: 1280px) {
+  .hero-tech-graphic { right: 4rem; width: 400px; height: 400px; opacity: 0.9; }
+}
+
+.tech-svg {
+  width: 100%;
+  height: 100%;
+  animation: techRotate 60s linear infinite;
+}
+@keyframes techRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.tech-sweep {
+  transform-origin: 170px 170px;
+  animation: sweepSpin 8s linear infinite;
+}
+@keyframes sweepSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-svg { animation: none; }
+  .tech-sweep { animation: none; opacity: 0.05; }
+}
+

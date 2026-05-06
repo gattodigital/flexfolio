@@ -90,6 +90,57 @@
           </div>
         </div>
       </div>
+      <!-- Tech graphic: radar ring -->
+      <div class="hero-tech-graphic" aria-hidden="true">
+        <svg class="tech-svg" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer ring -->
+          <circle cx="170" cy="170" r="158" stroke="rgba(201,168,76,0.12)" stroke-width="1"/>
+          <!-- Mid ring -->
+          <circle cx="170" cy="170" r="120" stroke="rgba(201,168,76,0.10)" stroke-width="1"/>
+          <!-- Inner ring -->
+          <circle cx="170" cy="170" r="80" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+          <!-- Innermost -->
+          <circle cx="170" cy="170" r="40" stroke="rgba(201,168,76,0.18)" stroke-width="1"/>
+          <!-- Cross hairs -->
+          <line x1="170" y1="12" x2="170" y2="328" stroke="rgba(201,168,76,0.07)" stroke-width="1"/>
+          <line x1="12" y1="170" x2="328" y2="170" stroke="rgba(201,168,76,0.07)" stroke-width="1"/>
+          <!-- Diagonal cross -->
+          <line x1="58" y1="58" x2="282" y2="282" stroke="rgba(201,168,76,0.04)" stroke-width="1"/>
+          <line x1="282" y1="58" x2="58" y2="282" stroke="rgba(201,168,76,0.04)" stroke-width="1"/>
+          <!-- Tick marks at cardinal points on outer ring -->
+          <line x1="170" y1="12" x2="170" y2="22" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="318" x2="170" y2="328" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+          <line x1="12" y1="170" x2="22" y2="170" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+          <line x1="318" y1="170" x2="328" y2="170" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+          <!-- Tick marks at 45° on mid ring -->
+          <line x1="85" y1="85" x2="92" y2="92" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>
+          <line x1="255" y1="85" x2="248" y2="92" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>
+          <line x1="85" y1="255" x2="92" y2="248" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>
+          <line x1="255" y1="255" x2="248" y2="248" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>
+          <!-- Rotating sweep arc -->
+          <path class="tech-sweep" d="M170 170 L170 12 A158 158 0 0 1 291 249 Z" fill="url(#sweepGrad)" opacity="0.18"/>
+          <!-- Center dot -->
+          <circle cx="170" cy="170" r="3" fill="rgba(201,168,76,0.7)" opacity="0.7"/>
+          <!-- Data points on rings -->
+          <circle cx="170" cy="50" r="2.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="290" cy="170" r="2.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="170" cy="290" r="2.5" fill="rgba(201,168,76,0.4)"/>
+          <circle cx="222" cy="88" r="1.5" fill="rgba(201,168,76,0.5)"/>
+          <circle cx="252" cy="222" r="1.5" fill="rgba(201,168,76,0.5)"/>
+          <!-- Small bracket corners -->
+          <path d="M12 30 L12 12 L30 12" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" fill="none"/>
+          <path d="M310 12 L328 12 L328 30" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" fill="none"/>
+          <path d="M12 310 L12 328 L30 328" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" fill="none"/>
+          <path d="M310 328 L328 328 L328 310" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" fill="none"/>
+          <defs>
+            <radialGradient id="sweepGrad" cx="170" cy="170" r="158" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
       <div class="hero-scroll" aria-hidden="true">
         <span class="hero-scroll-text">Scroll</span>
         <div class="hero-scroll-line"></div>
@@ -276,6 +327,104 @@
             <p class="work-desc">Developed a bespoke booking and experiences interface that elevated customer engagement across the World of Hyatt loyalty platform. Seamless UX meeting enterprise-grade performance standards.</p>
             <a href="#contact" class="work-link" aria-label="Learn more about World of Hyatt project">View Project &#8599;</a>
           </article>
+          <article class="work-item reveal reveal-delay-1" role="listitem">
+            <span class="work-index" aria-hidden="true">04</span>
+            <div>
+              <h3 class="work-name">Graham <em>Healthcare</em> Group</h3>
+              <div class="work-tags" aria-label="Project tags">
+                <span class="work-tag">Healthcare Tech</span>
+                <span class="work-tag">React</span>
+                <span class="work-tag">Dashboard UI</span>
+                <span class="work-tag">Enterprise</span>
+              </div>
+            </div>
+            <p class="work-desc">Architected the frontend for a multi-product healthcare workforce management platform. Designed and built a scalable React component library powering provider dashboards, scheduling interfaces, and patient-care coordination tools — engineered for HIPAA-compliant, high-availability environments.</p>
+            <a href="#contact" class="work-link" aria-label="Learn more about Graham Healthcare Group project">View Project &#8599;</a>
+          </article>
+          <article class="work-item reveal reveal-delay-2" role="listitem">
+            <span class="work-index" aria-hidden="true">05</span>
+            <div>
+              <h3 class="work-name"><em>Clarus</em> Care</h3>
+              <div class="work-tags" aria-label="Project tags">
+                <span class="work-tag">Digital Health</span>
+                <span class="work-tag">React</span>
+                <span class="work-tag">Care Coordination</span>
+                <span class="work-tag">UI/UX</span>
+              </div>
+            </div>
+            <p class="work-desc">Led UI/UX architecture for a digital care-coordination platform connecting patients, caregivers, and providers. Engineered accessible, responsive React interfaces with real-time data flows, role-based dashboards, and a design system that unified the product experience across web and mobile breakpoints.</p>
+            <a href="#contact" class="work-link" aria-label="Learn more about Clarus Care project">View Project &#8599;</a>
+          </article>
+          <article class="work-item reveal reveal-delay-3" role="listitem">
+            <span class="work-index" aria-hidden="true">06</span>
+            <div>
+              <h3 class="work-name">CSI <em>Pharmacy</em></h3>
+              <div class="work-tags" aria-label="Project tags">
+                <span class="work-tag">Healthcare</span>
+                <span class="work-tag">WordPress</span>
+                <span class="work-tag">E-Commerce</span>
+                <span class="work-tag">HIPAA UX</span>
+              </div>
+            </div>
+            <p class="work-desc">Full-site redesign for a specialty compounding pharmacy — custom WordPress build with WooCommerce integration, patient prescription request flows, and physician portal UX. Delivered a compliance-forward digital experience that dramatically improved patient acquisition and online order conversion.</p>
+            <a href="#contact" class="work-link" aria-label="Learn more about CSI Pharmacy project">View Project &#8599;</a>
+          </article>
+          <article class="work-item reveal reveal-delay-1" role="listitem">
+            <span class="work-index" aria-hidden="true">07</span>
+            <div>
+              <h3 class="work-name">Hello <em>Jams</em></h3>
+              <div class="work-tags" aria-label="Project tags">
+                <span class="work-tag">Music Tech</span>
+                <span class="work-tag">React</span>
+                <span class="work-tag">Streaming UI</span>
+                <span class="work-tag">Frontend Lead</span>
+              </div>
+            </div>
+            <p class="work-desc">Drove frontend architecture for a music discovery and streaming platform — React-powered audio player interface, artist profile system, playlist management UX, and a performant media browsing experience engineered for low-latency playback and high engagement across all device sizes.</p>
+            <a href="#contact" class="work-link" aria-label="Learn more about Hello Jams project">View Project &#8599;</a>
+          </article>
+          <article class="work-item reveal reveal-delay-2" role="listitem">
+            <span class="work-index" aria-hidden="true">08</span>
+            <div>
+              <h3 class="work-name">Cleveland Clinic <em>Yoga Portal</em></h3>
+              <div class="work-tags" aria-label="Project tags">
+                <span class="work-tag">Healthcare Wellness</span>
+                <span class="work-tag">WordPress</span>
+                <span class="work-tag">Class Scheduling</span>
+                <span class="work-tag">UX Design</span>
+              </div>
+            </div>
+            <p class="work-desc">Designed and developed a wellness scheduling portal under the Cleveland Clinic brand umbrella — custom WordPress build with class booking flows, instructor profiles, and a content-rich wellness hub. Maintained strict brand compliance while delivering an intuitive, mobile-first experience aligned with clinical quality standards.</p>
+            <a href="#contact" class="work-link" aria-label="Learn more about Cleveland Clinic Yoga Portal project">View Project &#8599;</a>
+          </article>
+          <article class="work-item reveal reveal-delay-3" role="listitem">
+            <span class="work-index" aria-hidden="true">09</span>
+            <div>
+              <h3 class="work-name"><em>Mayo</em> Civic Center</h3>
+              <div class="work-tags" aria-label="Project tags">
+                <span class="work-tag">Events & Venues</span>
+                <span class="work-tag">WordPress</span>
+                <span class="work-tag">Ticketing UX</span>
+                <span class="work-tag">SEO</span>
+              </div>
+            </div>
+            <p class="work-desc">Full frontend overhaul for a premier convention and event venue — custom WordPress theme, interactive event calendar, dynamic venue layout pages, and an SEO-optimized architecture that positioned the center as the top regional event destination. Performance-tuned for peak traffic during major event announcements.</p>
+            <a href="#contact" class="work-link" aria-label="Learn more about Mayo Civic Center project">View Project &#8599;</a>
+          </article>
+          <article class="work-item reveal reveal-delay-1" role="listitem">
+            <span class="work-index" aria-hidden="true">10</span>
+            <div>
+              <h3 class="work-name">RP Funding <em>Center</em></h3>
+              <div class="work-tags" aria-label="Project tags">
+                <span class="work-tag">Arena & Events</span>
+                <span class="work-tag">WordPress</span>
+                <span class="work-tag">Interactive Seating</span>
+                <span class="work-tag">Mobile-First</span>
+              </div>
+            </div>
+            <p class="work-desc">Engineered the complete web presence for a major multi-purpose arena and event center — mobile-first WordPress platform, interactive seating chart integrations, event discovery system, and a high-performance ticketing UX. Delivered seamless fan-to-event journeys that drove measurable increases in direct online ticket sales.</p>
+            <a href="#contact" class="work-link" aria-label="Learn more about RP Funding Center project">View Project &#8599;</a>
+          </article>
         </div>
       </div>
     </section>
@@ -379,7 +528,7 @@
             <div class="contact-info-item">
               <span class="contact-info-label">Connect</span>
               <div class="social-links" role="list">
-                <a href="https://linkedin.com/in/andresramirez" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+                <a href="https://linkedin.com/in/andresramirezdev" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                     <rect x="2" y="9" width="4" height="12"/>
